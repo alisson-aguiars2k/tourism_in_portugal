@@ -1,0 +1,678 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,400&family=Redressed&display=swap');
+
+:root {
+  --cor1: rgb(0, 129, 40);
+  --cor2: rgb(164, 13, 14);
+  --cor3: rgb(250, 250, 250);
+
+  
+  --fonte-destaque: 'Redressed', cursive;
+  --fonte_padrao: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-padrao);
+}
+
+header .line {
+  display: flex;
+  height: 10px;
+}
+header .line_left {
+  width: 50%;
+  height: 10px;
+  background-color: var(--cor1);
+}
+header .line_right {
+  width: 50%;
+  height: 10px;
+  background-color: var(--cor2);
+}
+.container{
+  max-width: 1140px;
+  margin: auto;
+}
+.bar {
+  background-color: var(--cor1);
+  width: 168px;
+  height: 22px;
+}
+h1 {
+  font-family: var(--fonte-destaque);
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 96px;
+  letter-spacing: 5px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+h2 {
+  font-family: var(--fonte-destaque);
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  margin: 20px 0px;
+  
+}
+p {
+  text-align: justify;
+  line-height: 25px;
+}
+.button {
+  display: inline-block;
+  border: 1px solid var(--cor1);
+  padding: 10px 30px;
+  border-radius: 10px ;
+  color: var(--cor4);
+  text-decoration: none;
+  margin-top: 50px;
+}
+.button:hover {
+  background-color: var(--cor2);
+  color: var(--cor3);
+}
+.header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+.header_left img {
+  width: 64px;
+  height: 64px;
+  margin-right: 25px;
+}
+.header_right {
+  display: flex;
+  align-items: center;
+}
+.header_search form{
+  display: flex;
+}
+.header_search input {
+  font-size: 16px;
+  padding: 5px 20px;
+  border: 1px solid var(--cor1);
+  outline: 0;
+  width: 100%;
+  max-width: 210px;
+}
+.header_search input::placeholder {
+  color: var(--cor2);
+}
+.header_search button {
+  border: 0;
+  background-color: transparent;
+  margin-left: -30px;
+  cursor: pointer;
+}
+.header_search button img {
+  width: 16px;
+  height: 16px;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+#menu_opener img{
+  width: 40px;
+  height: 40px;
+  margin-top: 25px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+#menu_area {
+  margin-top: 10px;
+  width: 0px;
+  height: 170px;
+  background-color: rgba(0, 129, 41, 0.7);
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all ease .5s;
+}
+/*.menu_opened {
+  width: 170px;
+}
+*/
+#menu_area ul,
+#menu_area li {
+  list-style: none;
+  padding: 0px;
+  margin: 5px 0px 5px 0px;
+}
+#menu_area a {
+  display: inline-block;
+  width: 100vw;
+  padding: 5px;
+  text-decoration: none;
+  color: var(--cor3);
+  
+}
+#menu_area a:hover {
+  color: var(--cor3);
+  background-color: var(--cor2);
+} 
+
+.banner {
+  background-image: url(../images/banner_sintra.png);
+  background-position: center;
+  background-size: cover;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.banner_images {
+  margin-top: 100px;
+}
+.banner_images img{
+  width: 148px;
+  height: 148px;
+  border: 3px solid transparent;
+  outline: 3px solid var(--cor1);
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.area_one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.area_one_content {
+  padding: 80px;
+}
+.area_one_img1 {
+  height: 250px;
+  background-image: url(../images/lisboa_letters.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.area_one_img2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  background-image: url(../images/lisboa_img2.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.area_two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.area_two_content {
+  padding: 80px;
+}
+.area_two_img1 {
+  height: 500px;
+  background-image: url(../images/porto_letters.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.area_two_img2 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-image: url(../images/porto_img1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.area_three {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.area_three_content {
+  padding: 80px;
+}
+.area_three_img1 {
+  height: 250px;
+  background-image: url(../images/coimbra_letters.png);
+  background-size: cover;
+  background-position: center;
+}
+.area_three_img2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  background-image: url(../images/coimbra_img3.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.area_four {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.area_four_content {
+  padding: 300px 80px;
+}
+.area_four_img {
+  background-image: url(../images/al.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.area_five {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.area_five_content {
+  padding: 200px 80px;
+}
+.area_five_img {
+  background-image: url(../images/photo_cascais.png);
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.area_six {
+  height: 700px;
+  background-image: url(../images/photo_portugal.png);
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+footer p {
+  padding: 2px;
+  background-color: var(--cor3);
+  text-align: center;
+  font-size: 10px;
+  color: var(--cor1);
+}
+footer a {
+  color: var(--cor1);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--cor2);
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .area_one_content {
+    padding: 40px;
+  }
+  .area_two_content {
+    padding: 40px;
+  }
+  .area_three_content {
+    padding: 40px;
+  }
+  .area_four_content {
+    padding: 150px 40px;
+  }
+  .area_five_content {
+    padding: 100px 40px;
+  }
+}
+@media (min-width: 582px) and (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  h1 {
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: 5px;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    margin: 20px 0px;
+  }
+  .button {
+    display: inline-block;
+    border: 1px solid var(--cor1);
+    padding: 5px 15px;
+    border-radius: 5px ;
+    color: var(--cor4);
+    text-decoration: none;
+    margin-top: 25px;
+  }
+  .header_search input {
+    font-size: 16px;
+    padding: 5px 20px;
+    border: 1px solid rgb(0, 129, 40);
+    outline: 0;
+    width: 100%;
+    max-width: 150px;
+  }
+  .banner {
+    background-image: url(../images/banner_sintra.png);
+    background-position: right;
+    background-size: cover;
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .banner_images img{
+    width: 74px;
+    height: 74px;
+    border: 3px solid transparent;
+    outline: 3px solid var(--cor1);
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+  .area_one {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  .area_two {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  .area_three {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  .area_four {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  .area_five {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  .area_one_content {
+    padding: 20px;
+  }
+  .area_two_content {
+    padding: 20px;
+  }
+  .area_three_content {
+    padding: 20px;
+  }
+  .area_four_content {
+    padding: 75px 20px;
+  }
+  .area_five_content {
+    padding: 50px 20px;
+  }
+  .area_two_img1 {
+    height: 250px;
+    background-image: url(../images/porto_letters.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .area_three_img1 {
+    height: 200px;
+    background-image: url(../images/coimbra_letters.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .area_six {
+    height: 350px;
+    background-image: url(../images/photo_portugal.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+}
+@media (min-width: 420px) and (max-width: 582px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  h1 {
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: 5px;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    margin: 20px 0px;
+  }
+  .button {
+    display: inline-block;
+    border: 1px solid var(--cor1);
+    padding: 5px 15px;
+    border-radius: 5px ;
+    color: var(--cor4);
+    text-decoration: none;
+    margin-top: 25px;
+  }
+  .header_search input {
+    font-size: 16px;
+    padding: 5px 20px;
+    border: 1px solid var(--cor1);
+    outline: 0;
+    width: 100%;
+    max-width: 150px;
+  }
+  .banner {
+    background-image: url(../images/banner_sintra.png);
+    background-position: right;
+    background-size: cover;
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .banner_images img{
+    width: 100px;
+    height: 100px;
+    border: 3px solid transparent;
+    outline: 3px solid var(--cor1);
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .area_one {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  .area_two {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  .area_three {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  .area_four {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+  }
+  .area_five {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  .area_one_content {
+    padding: 20px;
+  }
+  .area_two_content {
+    padding: 20px;
+  }
+  .area_three_content {
+    padding: 20px;
+  }
+  .area_four_content {
+    padding: 75px 20px;
+  }
+  .area_five_content {
+    padding: 50px 20px;
+  }
+  .area_one_img1 {
+    height: 200px;
+    background-image: url(../images/lisboa_letters.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .area_two_img1 {
+    height: 250px;
+    background-image: url(../images/porto_letters.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .area_three_img1 {
+    height: 100px;
+    background-image: url(../images/coimbra_letters.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .area_six {
+    height: 150px;
+    background-image: url(../images/photo_portugal.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+}
+@media (max-width: 419px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header_menu {
+    margin-left: 25px;
+  }
+  .header_left img {
+    width: 58px;
+    height: 58px;
+  }
+  .header_search {
+    display: none;
+  }
+  .header_menu img {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  .header_search input {
+    font-size: 16px;
+    padding: 5px 20px;
+    border: 1px solid var(--cor1);
+    outline: 0;
+    width: 100%;
+    max-width: 150px;
+  }
+  h1 {
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 54px;
+    letter-spacing: 5px;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-family: var(--fonte-destaque);
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    margin: 20px 0px;
+  }
+  .button {
+    display: inline-block;
+    border: 1px solid var(--cor1);
+    padding: 3px 9px;
+    border-radius: 5px ;
+    color: var(--cor4);
+    text-decoration: none;
+    margin-top: 25px;
+  }
+  .banner {
+    background-image: url(../images/banner_sintra.png);
+    background-position: right;
+    background-size: cover;
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .banner_images img{
+    width: 74px;
+    height: 74px;
+    border: 3px solid transparent;
+    outline: 3px solid var(--cor1);
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .area_one {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .area_two {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .area_three {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .area_four {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .area_five {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .area_one_content {
+    padding: 20px;
+  }
+  .area_two_content {
+    padding: 20px;
+  }
+  .area_three_content {
+    padding: 20px;
+  }
+  .area_four_content {
+    padding: 75px 20px;
+  }
+  .area_five_content {
+    padding: 50px 20px;
+  }
+  .area_two_img1 {
+    height: 250px;
+    background-image: url(../images/porto_letters.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .area_three_img1 {
+    height: 175px;
+    background-image: url(../images/coimbra_letters.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .area_four_content {
+    padding: 10px;
+  }
+  .area_four_img {
+    height: 175px;
+    background-image: url(../images/al.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .area_six {
+    height: 150px;
+    background-image: url(../images/photo_portugal.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+}
